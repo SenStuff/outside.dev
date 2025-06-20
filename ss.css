@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap');
+
+
+body {
+  font-family: "Cascadia Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+        /* Общие стили для фона и шрифта */
+        body {
+            background-color: #0d1117; /* Темный фон */
+            color: #ffff; /* Классический зеленый текст */
+            padding: 1.5rem; /* Отступ от краев */
+            min-height: 100vh; /* Минимальная высота на весь экран */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+            /* Базовое размытие и легкий глитч для всего экрана */
+            filter: blur(0.3px) brightness(1.05); /* Легкое размытие и яркость */
+            animation: screen-flicker 0.2s infinite alternate; /* Мерцание экрана */
+        }
+
+        /* Эффект мерцания курсора для заголовков */
+        .header h1 {
+            display: inline-block;
+            overflow: hidden;
+            border-right: .15em solid #0f0; /* Имитация курсора */
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* Анимация печати */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* Анимация мигающего курсора */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #0f0; }
+        }
+
+        /* Анимация мерцания всего экрана (легкий глитч) */
+        @keyframes screen-flicker {
+            0% { opacity: 1; filter: brightness(1.05) blur(0.3px); }
+            10% { opacity: 0.98; filter: brightness(1.02) blur(0.4px); }
+            20% { opacity: 1; filter: brightness(1.05) blur(0.3px); }
+            30% { opacity: 0.97; filter: brightness(1.0) blur(0.5px); }
+            40% { opacity: 1; filter: brightness(1.05) blur(0.3px); }
+            50% { opacity: 0.99; filter: brightness(1.03) blur(0.35px); }
+            60% { opacity: 1; filter: brightness(1.05) blur(0.3px); }
+            70% { opacity: 0.96; filter: brightness(0.98) blur(0.6px); }
+            80% { opacity: 1; filter: brightness(1.05) blur(0.3px); }
+            90% { opacity: 0.98; filter: brightness(1.02) blur(0.4px); }
+            100% { opacity: 1; filter: brightness(1.05) blur(0.3px); }
+        }
+
+        /* Обертка для CRT-эффекта */
+        .crt-screen-wrapper {
+            position: relative; /* Необходимо для псевдоэлементов */
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(56, 56, 56, 56);
+            border: 1px solid #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 255), 0 0 25px rgba(255, 255, 255, 255); /* Более сильное свечение */
+            border-radius: 0.5rem; /* Скругление углов для бочкообразного эффекта */
+            padding: 1.5rem;
+            margin-top: 1rem;
+            overflow: hidden; /* Обрезаем контент по радиусу */
+
+            /* Имитация бочкообразного искажения и глубины */
+            transform:
+                scaleY(0.98) /* Слегка сжимаем по вертикали */
+                scaleX(1.02) /* Слегка растягиваем по горизонтали */
+                perspective(600px) /* Добавляем перспективу */
+                rotateX(0.5deg); /* Небольшой поворот по оси X для глубины */
+            transform-origin: center center; /* Точка трансформации в центре */
+            transition: transform 0.1s ease-in-out; /* Плавные переходы для трансформаций */
+        }
+
+        /* Сканлайны (горизонтальные линии) */
+        .crt-screen-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 50%); /* Полупрозрачные черные линии */
+            background-size: 100% 4px; /* Размер одной линии */
+            pointer-events: none; /* Не мешает взаимодействию */
+            opacity: 0.5; /* Прозрачность сканлайнов */
+            animation: scanlines-fade 1s infinite alternate; /* Легкое мерцание сканлайнов */
+        }
+
+        /* Анимация для мерцания сканлайнов */
+        @keyframes scanlines-fade {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.4; }
+        }
+
+        /* Стилизация ссылок */
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.125rem;
+        }
+
+        .links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .links a:hover {
+            color: gray;
+        }
+
+        /* Стилизация заголовка сайта */
+        .header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .header h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        /* Стилизация отдельных постов */
+        .post {
+            border-top: 1px dashed #fff;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .post:first-of-type {
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .post .title {
+            color: #fff;
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .post .content {
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .post .date {
+            color: rgba(195, 195, 195, 195);
+            font-size: 0.875rem;
+            text-align: right;
+            margin-top: 0.5rem;
+        }
+
+        /* Стиль для блока кода внутри поста */
+        .code-block {
+            background-color: rgba(60, 60, 60, 60);
+            border: 1px dashed rgba(255, 255, 255, 255);
+            padding: 1rem;
+            margin-top: 1rem;
+            white-space: pre-wrap;
+            word-break: break-all;
+            overflow-x: auto;
+            border-radius: 0.125rem;
+        }
+
+        /* Стиль для изображений в постах */
+        .post-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #0f0;
+            box-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+            margin-top: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Адаптивный дизайн для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                padding: 0.5rem; /* Меньше отступ на мобильных */
+                font-size: 0.9rem; /* Чуть меньше шрифт */
+            }
+            .crt-screen-wrapper {
+                padding: 1rem;
+                border-radius: 0.25rem; /* Меньше скругление на мобильных */
+                transform: none; /* Отключаем сложные трансформации на мобильных для производительности */
+                box-shadow: 0 0 10px rgba(255, 255, 255, 255); /* Меньше свечение */
+            }
+            .header h1 {
+                font-size: 1.75rem;
+                text-align: center;
+                width: auto;
+                border-right: none;
+                animation: none;
+            }
+            .header .links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 1rem;
+                font-size: 1rem;
+            }
+            .post .title {
+                font-size: 1.25rem;
+            }
+            .post .content {
+                font-size: 0.9rem;
+            }
+            .post .date {
+                font-size: 0.75rem;
+            }
+            /* Отключаем сканлайны на мобильных, если они мешают читаемости */
+            .crt-screen-wrapper::before {
+                display: none;
+            }
+            /* Отключаем глобальный глитч-эффект на мобильных */
+            body {
+                animation: none;
+                filter: none;
+            }
+        }
