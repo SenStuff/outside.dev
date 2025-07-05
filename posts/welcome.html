@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE OUTSIDE - Development Log</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title" id="glitch-title">THE OUTSIDE</h1>
+                <div class="subtitle">DEVELOPMENT LOG</div>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <a href="/index.html"><button class="tab-button" data-tab="devlog">BACK</button></a>
+        </nav>
+
+        <main class="tab-content">
+            <div id="devlog" class="tab-panel active">
+                <div class="dev-log-entry">
+                    <div class="entry-header">
+                        <h2 class="entry-title">Welcome to "The Outside" game DevLog!</h2>
+                        <div class="entry-badges">
+                        </div>
+                    </div>
+                    <div class="entry-meta">
+                        <p>[[TIMESTAMP: 05.07.25]] [[AUTHOR: <a href="https://github.com/yaragirodev">yaragirodev</a>]]</p>
+                    </div>
+                    <div class="entry-content">
+                        <p>Welcome to the "The Outside" devlog! Here, we'll be posting changelogs, updates, our plans, and more!</p>
+                        <br>
+                        <p><strong>A bit of history</strong></p>
+                        <ul>
+                            <p>In early August 2024, the founder of the game, known by the nickname s_npll (aka Sen's Stuff), saw a TikTok video about a game called "West Woods." It’s a game where, in the morning, you have to gather supplies in different houses around a village and build shelters, and at night, you survive against monsters. That’s how the idea for the game was born. It went something like:
+"What if we combined 'The Rake,' 'West Woods,' and set it all in a big city?"
+
+About a week later, a test place was created in Roblox Studio — this is where the development of "The Outside" began. In this test place, various things were tried out — camera offset and animations.
+
+About a month later, work on the game’s map began. It was created by the second developer, yaragirodev (the one writing this text). The map was completed around October 2024. From then until December 2024, the team worked on the AI for a monster named Harry (the concept and initial model were made by yaragirodev). Around this time, s_npll’s friend, known as Antonhy, joined the development. He created a prototype AI for Harry, and it was pretty decent — the AI could follow players through walls and search for alternative paths (not always correctly, thanks to Roblox Raycast 😅).
+
+Then, a new goal appeared — to create a Christmas-themed map! From early to mid-December, the city map was built (or reworked). This festive version remained in the game until the end of February 2025, after which it was replaced with the regular version.
+
+Around June 2025, the city finally received a name — Blackstone.
+During the same period, the team also began considering bringing more people into the development to help expand the project.
+Team Roles:
+
+    s_npll — lead developer, founder of the game, scripter
+
+    yaragirodev — builder, website coder
+
+    Antonhy — composer, scripter
+
+That’s the whole story so far. This post will be updated with more details — unless s_npll deletes it.</p>
+                        </ul>
+                        <br>
+                        <!--<p class="warning-text">⚠️ WARNING: Testing required before public release. Entity behavior may be too aggressive for casual players.</p>-->
+                    </div>
+                </div>
+                </div>
+            <div id="media" class="tab-panel">
+                <div class="media-grid">
+                    <div class="media-card">
+                        <div class="card-header">
+                            <h3 class="card-title">RESEARCH FACILITY</h3>
+                            <div class="card-subtitle">NEW AREA - ALPHA v0.8.3</div>
+                        </div>
+                        <div class="media-content">
+                            <img src="/static/img/forest.jpg" alt="Research Facility Exterior" class="media-image">
+                            <p class="media-description">The abandoned research facility where it all began...</p>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="card-header">
+                            <h3 class="card-title">BUILDING FIX COMPARISON</h3>
+                            <div class="card-subtitle">BEFORE/AFTER</div>
+                        </div>
+                        <div class="media-content">
+                            <img src="/static/img/fix1.png" alt="Fixed building positioning" class="media-image">
+                            <p class="media-description">Resolved floating building geometry issues in Blackstone city.</p>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="card-header">
+                            <h3 class="card-title">ENTITY BEHAVIOR TEST</h3>
+                            <div class="card-subtitle">AI DEVELOPMENT</div>
+                        </div>
+                        <div class="media-content">
+                            <div class="video-placeholder">
+                                <div class="video-icon">👁️</div>
+                                <p>CLASSIFIED FOOTAGE</p>
+                                <p class="video-subtitle">Entity AI testing - Clearance Level 3 Required</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="card-header">
+                            <h3 class="card-title">MULTIPLAYER STRESS TEST</h3>
+                            <div class="card-subtitle">12 PLAYERS</div>
+                        </div>
+                        <div class="media-content">
+                            <div class="video-placeholder">
+                                <div class="video-icon">🌐</div>
+                                <p>NETWORK TEST FOOTAGE</p>
+                                <p class="video-subtitle">12-player multiplayer synchronization test</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-card full-width">
+                    <div class="card-header">
+                        <h3 class="card-title">GAMEPLAY TRAILER</h3>
+                        <div class="card-subtitle">COMING SOON - BETA RELEASE</div>
+                    </div>
+                    <div class="media-content">
+                        <div class="video-placeholder large">
+                            <div class="video-icon">🎮</div>
+                            <p>OFFICIAL TRAILER IN PRODUCTION</p>
+                            <p class="video-subtitle">Full gameplay trailer featuring new research facility area</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-grid">
+                    <div class="media-card">
+                        <div class="card-header">
+                            <h3 class="card-title">CONCEPT ART</h3>
+                            <div class="card-subtitle">EARLY DESIGNS</div>
+                        </div>
+                        <div class="media-content">
+                            <div class="image-placeholder">
+                                <div class="image-icon">🎨</div>
+                                <p>CONCEPT GALLERY</p>
+                                <p class="image-subtitle">Early concept art and design sketches</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="card-header">
+                            <h3 class="card-title">BEHIND THE SCENES</h3>
+                            <div class="card-subtitle">DEVELOPMENT PROCESS</div>
+                        </div>
+                        <div class="media-content">
+                            <div class="video-placeholder">
+                                <div class="video-icon">🛠️</div>
+                                <p>DEV DIARY SERIES</p>
+                                <p class="video-subtitle">Development process documentation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="card-header">
+                            <h3 class="card-title">COMMUNITY HIGHLIGHTS</h3>
+                            <div class="card-subtitle">PLAYER CREATIONS</div>
+                        </div>
+                        <div class="media-content">
+                            <div class="image-placeholder">
+                                <div class="image-icon">⭐</div>
+                                <p>COMMUNITY SHOWCASE</p>
+                                <p class="image-subtitle">Fan art and community contributions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="info" class="tab-panel">
+                <div class="info-card">
+                    <div class="card-header">
+                        <h2 class="card-title">PROJECT OVERVIEW</h2>
+                        <div class="card-subtitle">What is "The Outside"?</div>
+                    </div>
+                    <div class="info-content">
+                        <p class="info-description">
+                            "The Outside" is an immersive multiplayer horror experience set in the abandoned city of Blackstone. Players must work together to survive encounters with a mysterious entity known as "Harry" while uncovering the dark secrets of a failed research project. Combining psychological horror with cooperative gameplay, the experience challenges players to balance survival instincts with scientific curiosity.
+                        </p>
+                        <div class="specs-grid">
+                            <div class="specs-section">
+                                <h4>TECHNICAL SPECIFICATIONS</h4>
+                                <ul>
+                                    <li>• Platform: Roblox</li>
+                                    <li>• Genre: Multiplayer Horror/Survival</li>
+                                    <li>• Max Players: 12</li>
+                                    <li>• Development Started: August 2024</li>
+                                    <li>• Engine: Roblox Studio</li>
+                                    <li>• Target Rating: 13+</li>
+                                </ul>
+                            </div>
+                            <div class="specs-section">
+                                <h4>GAMEPLAY FEATURES</h4>
+                                <ul>
+                                    <li>• Dynamic AI entity behavior</li>
+                                    <li>• 3D spatial audio system</li>
+                                    <li>• Procedural fear mechanics</li>
+                                    <li>• Research-based progression</li>
+                                    <li>• Voice chat integration</li>
+                                    <li>• Cross-platform compatibility</li>
+                                </ul>
+                            </div>
+                            <div class="specs-section">
+                                <h4>DEVELOPMENT TEAM</h4>
+                                <ul>
+                                    <li>• Lead Developer: yaragirodev</li>
+                                    <li>• AI Programming: yaragirodev</li>
+                                    <li>• Level Design: yaragirodev</li>
+                                    <li>• Audio Design: Community</li>
+                                    <li>• Testing: Beta Community</li>
+                                    <li>• Community Management: Discord</li>
+                                </ul>
+                            </div>
+                            <div class="specs-section">
+                                <h4>SYSTEM REQUIREMENTS</h4>
+                                <ul>
+                                    <li>• Roblox Client (Latest)</li>
+                                    <li>• Stable Internet Connection</li>
+                                    <li>• Microphone (Recommended)</li>
+                                    <li>• Headphones (Strongly Recommended)</li>
+                                    <li>• 4GB RAM Minimum</li>
+                                    <li>• DirectX 10 Compatible GPU</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lore-card">
+                    <div class="card-header">
+                        <h2 class="card-title">THE BLACKSTONE INCIDENT</h2>
+                        <div class="card-subtitle">Background Lore</div>
+                    </div>
+                    <div class="lore-content">
+                        <p>In 2019, the Blackstone Research Facility was conducting classified experiments on dimensional anomalies. The project, codenamed "OUTSIDE," aimed to create controlled breaches in reality for scientific observation. However, something went wrong during Test Subject H-4RRY...</p>
+                        <br>
+                        <p>The city was evacuated within hours. Official reports cited a "chemical leak," but survivors tell a different story. They speak of shadows that move independently, of whispers in empty rooms, and of something that watches from the spaces between spaces.</p>
+                        <br>
+                        <p>Now, years later, research teams are being sent back into Blackstone. Their mission: document the anomaly, study its behavior, and determine if containment is possible. But in Blackstone, the observer becomes the observed, and the hunter becomes the hunted.</p>
+                        <br>
+                        <div class="classified-section">
+                            <h4>CLASSIFIED INFORMATION - CLEARANCE LEVEL 3</h4>
+                            <p class="classified-text">[REDACTED] - Entity designation H-4RRY exhibits [REDACTED] behavior patterns. Subjects report [REDACTED] and persistent feeling of being watched. Recommend [REDACTED] protocols for all field teams.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="card-header">
+                        <h2 class="card-title">COMMUNITY HUB</h2>
+                        <div class="card-subtitle">Join our Discord server for updates, testing, and exclusive content</div>
+                    </div>
+                    <div class="community-content">
+                        <div class="community-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">847</div>
+                                <div class="stat-label">Community Members</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">156</div>
+                                <div class="stat-label">Beta Testers</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">23</div>
+                                <div class="stat-label">Bug Reports</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">12</div>
+                                <div class="stat-label">Active Developers</div>
+                            </div>
+                        </div>
+                        <iframe 
+                            src="https://discordapp.com/widget?id=1272600287193858070&theme=dark" 
+                            width="350" 
+                            height="400" 
+                            allowtransparency="true" 
+                            frameborder="0" 
+                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                            class="discord-widget">
+                        </iframe>
+                        <div class="community-links">
+                            <a href="#" class="community-link">
+                                <span class="link-icon">📋</span>
+                                <span>Beta Testing Application</span>
+                            </a>
+                            <a href="#" class="community-link">
+                                <span class="link-icon">🐛</span>
+                                <span>Bug Report Form</span>
+                            </a>
+                            <a href="#" class="community-link">
+                                <span class="link-icon">💡</span>
+                                <span>Feature Suggestions</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credits-card">
+                    <div class="card-header">
+                        <h2 class="card-title">SPECIAL THANKS</h2>
+                    </div>
+                    <div class="credits-content">
+                        <div class="credits-section">
+                            <h4>BETA TESTING TEAM</h4>
+                            <p>Our dedicated beta testers who brave the horrors of Blackstone to help us improve the experience.</p>
+                        </div>
+                        <div class="credits-section">
+                            <h4>COMMUNITY CONTRIBUTORS</h4>
+                            <p>Artists, writers, and creators who have contributed to the project's development and lore.</p>
+                        </div>
+                        <div class="credits-section">
+                            <h4>ROBLOX DEVELOPER COMMUNITY</h4>
+                            <p>For technical support, resources, and inspiration throughout the development process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2024-2025 THE OUTSIDE TEAM</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
