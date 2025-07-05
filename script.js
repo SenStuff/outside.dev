@@ -20,6 +20,8 @@ function updateClock() {
 // Glitch effect for title
 function glitchTitle() {
   const titleElement = document.getElementById("glitch-title")
+  if (!titleElement) return
+
   const originalText = "THE OUTSIDE"
 
   // Create glitched version
@@ -104,9 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Start glitch effect
   setInterval(glitchTitle, 3000)
 
-  // Initialize tabs
-  initTabs()
-
   // Initialize progress bar animations
   animateProgressBars()
 
@@ -125,34 +124,15 @@ document.addEventListener("DOMContentLoaded", () => {
   )
 })
 
-// Add keyboard navigation for tabs
-document.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-    const activeTab = document.querySelector(".tab-button.active")
-    const tabButtons = Array.from(document.querySelectorAll(".tab-button"))
-    const currentIndex = tabButtons.indexOf(activeTab)
-
-    let nextIndex
-    if (e.key === "ArrowLeft") {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : tabButtons.length - 1
-    } else {
-      nextIndex = currentIndex < tabButtons.length - 1 ? currentIndex + 1 : 0
-    }
-
-    tabButtons[nextIndex].click()
-    tabButtons[nextIndex].focus()
-  }
-})
-
 // Console easter egg
 console.log(`
 ╔══════════════════════════════════════╗
 ║          THE OUTSIDE v0.8.3          ║
 ║        DEVELOPMENT CONSOLE           ║
 ║                                      ║
-║  Status: UNKNOWN                     ║
-║  Access Level: USER                  ║
-║  Entity Status: [REDACTED]           ║
+║  Status: CLASSIFIED                  ║
+║  Access Level: DEVELOPER             ║
+║  Entity Status: CONTAINED            ║
 ║                                      ║
 ║  Welcome to the development log...   ║
 ╚══════════════════════════════════════╝

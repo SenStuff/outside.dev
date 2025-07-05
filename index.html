@@ -16,194 +16,46 @@
                 <h1 class="main-title" id="glitch-title">THE OUTSIDE</h1>
                 <div class="subtitle">DEVELOPMENT LOG</div>
             </div>
-            
         </header>
 
         <nav class="tabs">
-            <button class="tab-button active" data-tab="devlog">DEV LOG</button>
-            <button class="tab-button" data-tab="progress">PROGRESS</button>
-            <button class="tab-button" data-tab="media">MEDIA</button>
-            <button class="tab-button" data-tab="info">INFO</button>
+            <a href="index.html" class="tab-button active">DEV LOG</a>
+            <a href="progress.html" class="tab-button">PROGRESS</a>
+            <a href="media.html" class="tab-button">MEDIA</a>
+            <a href="info.html" class="tab-button">INFO</a>
         </nav>
 
         <main class="tab-content">
-            <div id="devlog" class="tab-panel active"> <div class="dev-log-entry">
+            <div class="tab-panel active">
+                <div class="dev-log-entry">
                     <div class="entry-header">
-                        <h2 class="entry-title">Map Improvement</h2>
+                        <a href="posts/welcome.html"><h2 class="entry-title">WELCOME!</h2></a>
+                    </div>
+                    <div class="entry-meta">
+                        <p>[[TIMESTAMP: 05.07.25]] [[AUTHOR: <a href="https://github.com/yaragirodev">yaragirodev</a>]]</p>
+                    </div>
+                    <div class="entry-content">
+                        Welcome to the "The Outside" devlog! Here, we'll be posting...
+                    </div>
+                    <div class="media-content">
+                    </div>
+                </div>
+                
+                <div class="dev-log-entry">
+                    <div class="entry-header">
+                        <a href="posts/ai.html"><h2 class="entry-title">AI System</h2></a>
                         <div class="entry-badges">
-                            <span class="badge badge-content">MAP</span>
-                            <span class="badge badge-update">UPDATE</span>
+                            <span class="badge badge-content">DEVELOPMENT</span>
+                            <span class="badge badge-testing">AI</span>
                         </div>
                     </div>
                     <div class="entry-meta">
                         <p>[[TIMESTAMP: 05.07.25]] [[AUTHOR: <a href="https://github.com/yaragirodev">yaragirodev</a>]]</p>
                     </div>
                     <div class="entry-content">
-                        The problem with the buildings was fixed; they were "hanging" in the air.
-                    </div>
-                <div class="media-content">
-                <img src="static/img/fix1.png">
-                    </div>
-                </div>
-            </div>
-
-            <div id="progress" class="tab-panel">
-                <div class="progress-card">
-                    <div class="card-header">
-                        <h2 class="card-title">DEVELOPMENT PROGRESS</h2>
-                    </div>
-                    <div class="progress-list">
-                        <div class="progress-item">
-                            <div class="progress-info">
-                                <span>Core Gameplay</span>
-                                <span>15%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 15%"></div>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-info">
-                                <span>Entity AI (Harry)</span>
-                                <span>1%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 1%"></div>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-info">
-                                <span>Multiplayer System</span>
-                                <span>40%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 40%"></div>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-info">
-                                <span>Map Design</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-info">
-                                <span>UI/UX</span>
-                                <span>32%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 32%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="status-grid">
-                    <div class="status-card">
-                        <div class="card-header">
-                            <h3 class="card-title">RECENT FIXES</h3>
-                        </div>
-                        <ul class="status-list">
-                            <li>• Light switching system in the park</li>
-                            <li>• The problem with the buildings was fixed; they were "hanging" in the air</li>
-                        </ul>
-                    </div>
-                    <!---
-                    <div class="status-card">
-                        <div class="card-header">
-                            <h3 class="card-title">PENDING ISSUES</h3>
-                        </div>
-                        <ul class="status-list issues">
-                            <li>• Occasional audio distortion during entity encounters</li>
-                            <li>• UI scaling issues on ultra-wide monitors</li>
-                            <li>• Server stability under high player load (above 6 players)</li>
-                        </ul>
-                    </div>
-                    --->
-                </div>
-            </div>
-
-            <div id="media" class="tab-panel">
-                <div class="media-grid">
-                    <div class="media-card">
-                        <div class="card-header">
-                            <h3 class="card-title">NEW AREA</h3>
-                        </div>
-                        <div class="media-content">
-                            <img src="static/img/forest.jpg" alt="New Forest Area" class="media-image">
-                        </div>
-                    </div>
-
-                    <div class="media-card">
-                        <div class="card-header">
-                            <h3 class="card-title">ENTITY BEHAVIOR TEST</h3>
-                            <div class="card-subtitle">COMING SOON...</div>
-                        </div>
-                        <div class="media-content">
-                            <div class="video-placeholder">
-                                <div class="video-icon">👁️</div>
-                                <p>IMAGE LOADING...</p>
-                                <p class="video-subtitle">Footage of Entity AI testing</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="media-card full-width">
-                    <div class="card-header">
-                        <h3 class="card-title">GAMEPLAY FOOTAGE</h3>
-                        <div class="card-subtitle">SOON...</div>
+                        About new AI system for Harry.
                     </div>
                     <div class="media-content">
-                        <div class="video-placeholder">
-                            <div class="video-icon">🎮</div>
-                            <p>VIDEO CONTENT LOADING...</p>
-                            <p class="video-subtitle">Gameplay footage will be available soon</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="info" class="tab-panel">
-                <div class="info-card">
-                    <div class="card-header">
-                        <h2 class="card-title">PROJECT OVERVIEW</h2>
-                        <div class="card-subtitle">What is "The Outside"?</div>
-                    </div>
-                    <div class="info-content">
-                        <p class="info-description">
-                            "The Outside" is a multiplayer horror experience on Roblox. Players must survive and study a mysterious entity known as "Harry" while exploring an abandoned city called "Blackstone".
-                        </p>
-                        <div class="specs-grid">
-                            <div class="specs-section">
-                                <h4>TECHNICAL SPECS</h4>
-                                <ul>
-                                    <li>• Platform: Roblox</li>
-                                    <li>• Genre: Horror</li>
-                                    <li>• Development Started: August 2024</li>
-                                </ul>
-                            </div>
-                    </div>
-                </div>
-                    <br>
-                <div class="community-card">
-                    <div class="card-header">
-                        <h2 class="card-title">COMMUNITY HUB</h2>
-                        <div class="card-subtitle">Join our Discord server for updates and testing</div>
-                    </div>
-                    <div class="community-content">
-                        <iframe 
-                            src="https://discordapp.com/widget?id=1272600287193858070&theme=dark" 
-                            width="350" 
-                            height="400" 
-                            allowtransparency="true" 
-                            frameborder="0" 
-                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                            class="discord-widget">
-                        </iframe>
                     </div>
                 </div>
             </div>
