@@ -1,4 +1,4 @@
-// Real-time clock functionality
+// THIS SCRPIT IS OUTDATED
 function updateClock() {
   const now = new Date()
   const timeString = now.toLocaleString("en-US", {
