@@ -128,7 +128,7 @@ body {
 /* Navigation Tabs */
 .tabs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0;
   margin-bottom: 2rem;
   background: rgba(0, 0, 0, 0.5);
@@ -147,6 +147,10 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   border-right: 1px solid rgba(0, 255, 0, 0.3);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tab-button:last-child {
@@ -180,6 +184,11 @@ body {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dev-log-entry:hover {
+  background-color: #11111162;
 }
 
 .entry-header {
@@ -543,14 +552,18 @@ body {
 }
 
 a {
-  text-decoration: none; /* Убирает подчеркивание */
-  color: #158e00ff; /* Устанавливает синий цвет ссылки */
-  font-size: 16px; /* Размер шрифта */
-  font-weight: normal; /* Обычный вес шрифта */
+  text-decoration: none;
+  color: #158e00ff;
+  font-size: 16px;
+  font-weight: normal;
 }
 
-/* Стили при наведении курсора */
 a:hover {
-  color: #0f6200ff; /* Более темный синий при наведении */
-  text-decoration: underline; /* Можно добавить подчеркивание при наведении, если нужно */
+  color: #0f6200ff;
+  text-decoration: underline;
+}
+
+.forest {
+  width: 410px;
+  height: 241px;
 }
